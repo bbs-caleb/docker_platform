@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+*.swo
+.env
+.venv
+venv/
+.envrc
+
+# IDEs and editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Docker / build artifacts
+*.log
+**/.docker/
+**/node_modules/
+**/dist/
+**/build/
+**/.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

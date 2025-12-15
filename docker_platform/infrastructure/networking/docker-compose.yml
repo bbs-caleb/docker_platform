@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  ping_service:
+    image: alpine:3.18
+    command: ["sh","-c","while true; do ping -c1 web || true; sleep 5; done"]
+    networks:
+      - lab-net
+
+  web:
+    image: nginx:1.27-alpine
+    networks:
+      - lab-net
+    ports:
+      - "8081:80"
+
+networks:
+  lab-net:
+    driver: bridge
